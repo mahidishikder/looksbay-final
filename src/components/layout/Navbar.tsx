@@ -107,7 +107,7 @@ export default function Navbar() {
 
           {/* Center: Nav Capsule */}
           <div className="relative hidden md:block">
-            <nav className="flex items-center gap-1.5 bg-black/60 backdrop-blur-2xl px-3.5 py-1.5 rounded-full border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.45)]">
+            <nav className="nav-glass flex items-center gap-1.5 px-3.5 py-1.5 rounded-full">
               {/* Services Trigger - ONLY THIS OPENS THE MEGA MENU */}
               <div
                 className="relative"
