@@ -1,0 +1,10 @@
+export { default as Home1_HeroSection } from "./Home1_HeroSection";
+export { default as Home2_IndustryGrid } from "./Home2_IndustryGrid";
+export { default as Home3_ProjectShowcase } from "./Home3_ProjectShowcase";
+export { default as Home4_BentoMetrics } from "./Home4_BentoMetrics";
+export { default as Home5_LiveSitesSlider } from "./Home5_LiveSitesSlider";
+export { default as Home6_TabsSwitcher } from "./Home6_TabsSwitcher";
+export { default as Home7_BeforeHireAgency } from "./Home7_BeforeHireAgency";
+export { default as Home8_FaqSection } from "./Home8_FaqSection";
+export { default as Home9_LeadHub } from "./Home9_LeadHub";
+export { default as Home10_Footer } from "./Home10_Footer";
