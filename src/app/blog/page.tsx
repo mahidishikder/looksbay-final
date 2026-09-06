@@ -29,7 +29,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen overflow-x-clip bg-[#FAF8FF] text-slate-900">
-      <section className="relative overflow-hidden bg-[#17062F] px-6 pb-20 pt-36 text-white sm:px-12 lg:px-20 lg:pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#4C1D95] via-[#581C87] to-[#3B0764] px-6 pb-20 pt-36 text-white sm:px-12 lg:px-20 lg:pb-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_10%,rgba(157,92,255,0.42),transparent_35%),radial-gradient(circle_at_10%_90%,rgba(204,255,0,0.10),transparent_30%)]" />
         <div className="relative mx-auto max-w-[1400px]">
           <div className="max-w-3xl">

@@ -1,17 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/robots.txt/route": "app/robots.txt/route.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/page": "app/page.js",
-  "/blog/[slug]/page": "app/blog/[slug]/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/about/page": "app/about/page.js",
-  "/how-we-work/page": "app/how-we-work/page.js",
-  "/portfolio/page": "app/portfolio/page.js",
-  "/reviews/page": "app/reviews/page.js",
-  "/services/page": "app/services/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/work/page": "app/work/page.js",
-  "/services/[slug]/page": "app/services/[slug]/page.js"
+  "/page": "app/page.js"
 }

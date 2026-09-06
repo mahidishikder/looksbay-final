@@ -2,6 +2,7 @@
 
 import React from "react";
 import Home1_HeroSection from "@/components/home/Home1_HeroSection";
+import HomeProofIntro, { HomeAudiencePositioning, HomeFlagshipPortfolio } from "@/components/home/HomeProofIntro";
 import Home2_IndustryGrid from "@/components/home/Home2_IndustryGrid";
 import Home3_ProjectShowcase from "@/components/home/Home3_ProjectShowcase";
 import HomeAgencyPositioning from "@/components/home/HomeAgencyPositioning";
@@ -21,37 +22,46 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <Home1_HeroSection />
 
-      {/* 2. Agency positioning, capabilities and engagement model */}
+      {/* 2. Credibility positioning */}
+      <HomeProofIntro />
+
+      {/* 3. Audience positioning */}
+      <HomeAudiencePositioning />
+
+      {/* 4. Flagship portfolio positioning */}
+      <HomeFlagshipPortfolio />
+
+      {/* 5. Agency positioning, capabilities and engagement model */}
       <RevealOnScroll>
         <HomeAgencyPositioning />
       </RevealOnScroll>
 
-      {/* 3. Client & Industry Fanned Card Grid */}
+      {/* 6. Client & Industry Fanned Card Grid */}
       <RevealOnScroll>
         <Home2_IndustryGrid />
       </RevealOnScroll>
 
-      {/* 4. Signature Showcase Cards (Sticky Stacking on Scroll) */}
+      {/* 7. Signature Showcase Cards (Sticky Stacking on Scroll) */}
       <RevealOnScroll>
         <Home3_ProjectShowcase />
       </RevealOnScroll>
 
-      {/* 5. Honest outcome proof */}
+      {/* 8. Honest outcome proof */}
       <RevealOnScroll>
         <HomeOutcomeProof />
       </RevealOnScroll>
 
-      {/* 5. FAQ Accordion (Unified max-w-[1440px] matching all sections) */}
+      {/* 9. FAQ Accordion (Unified max-w-[1440px] matching all sections) */}
       <RevealOnScroll>
         <Home8_FaqSection />
       </RevealOnScroll>
 
-      {/* 6. Interactive Lead Calculator Hub */}
+      {/* 10. Interactive Lead Calculator Hub */}
       <RevealOnScroll>
         <Home9_LeadHub />
       </RevealOnScroll>
 
-      {/* 7. Platform Footer */}
+      {/* 11. Platform Footer */}
       <Home10_Footer />
     </div>
   );

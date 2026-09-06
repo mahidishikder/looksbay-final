@@ -66,7 +66,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
   return (
     <div className="min-h-screen overflow-x-clip bg-[#FAF8FF] text-slate-900">
       <article>
-        <header className="relative overflow-hidden bg-[#17062F] px-6 pb-14 pt-36 text-white sm:px-12 lg:px-20 lg:pb-20">
+        <header className="relative overflow-hidden bg-gradient-to-b from-[#4C1D95] via-[#581C87] to-[#3B0764] px-6 pb-14 pt-36 text-white sm:px-12 lg:px-20 lg:pb-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_15%,rgba(157,92,255,0.42),transparent_38%),radial-gradient(circle_at_5%_100%,rgba(204,255,0,0.10),transparent_30%)]" />
           <div className="relative mx-auto max-w-4xl">
             <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-purple-200 transition-colors hover:text-[#CCFF00]"><ArrowLeft className="h-4 w-4" /> Back to insights</Link>
