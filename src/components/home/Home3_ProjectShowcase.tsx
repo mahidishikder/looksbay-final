@@ -8,7 +8,7 @@ import ProjectShowcaseCard from "./ProjectShowcaseCard";
 /**
  * 🏠 Home Component 3: Project Showcase Section
  * Ultra-large height cards with custom pastel palettes, rich dot-grid texture,
- * prominent crisp-white hand-drawn vector doodles, 3D floating emojis, and 2-layered editorial web mockups.
+ * prominent crisp-white hand-drawn vector doodles and 2-layered editorial web mockups.
  */
 export default function Home3_ProjectShowcase() {
   return (
@@ -68,7 +68,6 @@ export default function Home3_ProjectShowcase() {
           initialLikes={95}
           themeBg="#EADBFC"
           doodleType="rockon"
-          topSticker="🎩"
           frontCustomContent={
             <div className="w-full h-full bg-[#F4F1E9] p-5 sm:p-7 flex flex-col justify-between select-none overflow-hidden font-serif text-[#111111]">
               <div>
@@ -195,7 +194,6 @@ export default function Home3_ProjectShowcase() {
           initialLikes={838}
           themeBg="#EFE5D7"
           doodleType="spiral"
-          topSticker="🔥"
           frontImage="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=900&auto=format&fit=crop&q=80"
           frontImageAlt="Global Leathers Restaurant & Design Vision"
           backImage="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&auto=format&fit=crop&q=80"
@@ -231,7 +229,6 @@ export default function Home3_ProjectShowcase() {
           initialLikes={620}
           themeBg="#DBEAFE"
           doodleType="heart"
-          topSticker="🤘"
           frontImage="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=900&auto=format&fit=crop&q=80"
           frontImageAlt="Solana Payouts Web3 Crypto Portal"
           backImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80"
@@ -270,7 +267,6 @@ export default function Home3_ProjectShowcase() {
           initialLikes={334}
           themeBg="#FDDED6"
           doodleType="loops"
-          topSticker="🔥"
           frontImage="https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&auto=format&fit=crop&q=80"
           frontImageAlt="Early Fire Detection Sensor"
           backImage="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&auto=format&fit=crop&q=80"

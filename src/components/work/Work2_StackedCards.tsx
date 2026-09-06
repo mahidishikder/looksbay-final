@@ -17,7 +17,6 @@ export interface WorkProjectItem {
   initialLikes: number;
   themeBg: string;
   doodleType: "spiral" | "rockon" | "heart" | "loops";
-  topSticker: string;
   frontImage: string;
   frontImageAlt: string;
   backImage: string;
@@ -51,7 +50,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 95,
     themeBg: "#EADBFC",
     doodleType: "rockon",
-    topSticker: "🎩",
     frontImage:
       "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Infaces Editorial Storytelling",
@@ -84,7 +82,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 838,
     themeBg: "#EFE5D7",
     doodleType: "spiral",
-    topSticker: "🔥",
     frontImage:
       "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Global Leathers Interior Showcase",
@@ -117,7 +114,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 620,
     themeBg: "#DBEAFE",
     doodleType: "heart",
-    topSticker: "🤘",
     frontImage:
       "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Solana Payouts Web3 Crypto Portal",
@@ -152,7 +148,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 334,
     themeBg: "#FDDED6",
     doodleType: "loops",
-    topSticker: "🔥",
     frontImage:
       "https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Early Fire Detection Sensor",
@@ -185,7 +180,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 512,
     themeBg: "#D1FAE5",
     doodleType: "spiral",
-    topSticker: "✨",
     frontImage:
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Aura Horology Luxury Timepieces",
@@ -218,7 +212,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 740,
     themeBg: "#E0F2FE",
     doodleType: "rockon",
-    topSticker: "🚀",
     frontImage:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Apex Enterprise Cloud Intelligence",
@@ -252,7 +245,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 429,
     themeBg: "#FEF3C7",
     doodleType: "heart",
-    topSticker: "💎",
     frontImage:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Grand Lachine Luxury Estates",
@@ -285,7 +277,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 588,
     themeBg: "#F3E8FF",
     doodleType: "loops",
-    topSticker: "🎨",
     frontImage:
       "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Lumina Studio Production Showreel",
@@ -317,7 +308,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 682,
     themeBg: "#FEE2E2",
     doodleType: "rockon",
-    topSticker: "⚡",
     frontImage:
       "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Kinetix Athletic Activewear",
@@ -349,7 +339,6 @@ export const workProjectsList: WorkProjectItem[] = [
     initialLikes: 395,
     themeBg: "#CCFBF1",
     doodleType: "spiral",
-    topSticker: "🧬",
     frontImage:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900&auto=format&fit=crop&q=80",
     frontImageAlt: "Medix Clinical Diagnostic Center",
@@ -401,7 +390,6 @@ export default function Work2_StackedCards({ activeCategory = "All" }: Work2_Sta
             initialLikes={project.initialLikes}
             themeBg={project.themeBg}
             doodleType={project.doodleType}
-            topSticker={project.topSticker}
             frontImage={project.frontImage}
             frontImageAlt={project.frontImageAlt}
             backImage={project.backImage}

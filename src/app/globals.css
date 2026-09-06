@@ -308,6 +308,79 @@ img {
   justify-content: center;
 }
 
+.hero-home {
+  --hero-scroll: 0;
+  --pointer-x: 0;
+  --pointer-y: 0;
+  min-height: 100svh;
+  isolation: isolate;
+  background-image: radial-gradient(circle at calc(50% + var(--pointer-x) * 10%) calc(25% + var(--pointer-y) * 8%), rgba(204,255,0,0.1), transparent 24%), linear-gradient(to bottom, #7B35E8, #9D5CFF 48%, #6B21D0);
+}
+
+.hero-grid {
+  opacity: 0.14;
+  background-image: linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 76%);
+  transform: perspective(700px) rotateX(55deg) translateY(calc(var(--hero-scroll) * -110px)) scale(1.35);
+  transform-origin: center top;
+  animation: gridDrift 18s linear infinite;
+}
+
+.hero-orbit {
+  transform: translate3d(calc(var(--pointer-x) * 18px), calc(var(--pointer-y) * 12px - var(--hero-scroll) * 70px), 0);
+  transition: transform 0.35s ease-out;
+}
+
+.hero-orbit-one {
+  transform: translate3d(calc(-50% + var(--pointer-x) * 16px), calc(var(--pointer-y) * 12px - var(--hero-scroll) * 90px), 0);
+}
+
+.hero-orbit-two { animation: orbitPulse 8s ease-in-out infinite; }
+
+.hero-stage {
+  transition: transform 0.25s ease-out;
+}
+
+.hero-scanline {
+  height: 1px;
+  opacity: 0.45;
+  background: linear-gradient(90deg, transparent, rgba(204,255,0,0.8), transparent);
+  box-shadow: 0 0 24px 2px rgba(204,255,0,0.35);
+  animation: scanline 7s ease-in-out infinite;
+}
+
+.hero-reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.hero-video-frame {
+  transform: perspective(1100px) rotateX(calc(var(--pointer-y) * -2deg)) rotateY(calc(var(--pointer-x) * 3deg)) translate3d(calc(var(--pointer-x) * -14px), calc(var(--pointer-y) * -10px + var(--hero-scroll) * -110px), 0) scale(calc(1 - var(--hero-scroll) * 0.06));
+  transition: transform 0.35s ease-out;
+}
+
+@keyframes gridDrift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 72px, 72px 0; }
+}
+
+@keyframes orbitPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; transform: translate3d(calc(var(--pointer-x) * 18px), calc(var(--pointer-y) * 12px - var(--hero-scroll) * 70px), 0) scale(1.08); }
+}
+
+@keyframes scanline {
+  0%, 100% { transform: translateY(-18vh); opacity: 0; }
+  35%, 65% { opacity: 0.45; }
+  100% { transform: translateY(38vh); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-grid, .hero-orbit, .hero-stage, .hero-reveal, .hero-video-frame, .scroll-reveal { animation: none; transform: none; opacity: 1; }
+}
+
+
 .hero-primary::before {
   content: "";
   position: absolute;

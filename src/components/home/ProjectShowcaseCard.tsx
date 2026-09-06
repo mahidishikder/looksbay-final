@@ -20,7 +20,6 @@ export interface ProjectShowcaseProps {
   initialLikes: number;
   themeBg: string; // Rich pastel background color matching screenshot
   doodleType: "spiral" | "rockon" | "heart" | "loops";
-  topSticker: string;
   frontImage?: string;
   frontImageAlt?: string;
   backImage?: string;
@@ -45,7 +44,6 @@ export default function ProjectShowcaseCard({
   initialLikes,
   themeBg,
   doodleType,
-  topSticker,
   frontImage,
   frontImageAlt,
   backImage,
@@ -84,13 +82,6 @@ export default function ProjectShowcaseCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* 3D Top Floating Emoji/Sticker positioned OUTSIDE overflow-hidden without any shadow */}
-      <div className="absolute top-1 left-[26%] sm:left-[28%] -translate-x-1/2 z-40 select-none pointer-events-none transition-transform duration-500 group-hover:scale-120 group-hover:-translate-y-1">
-        <span className="text-5xl sm:text-6xl select-none">
-          {topSticker}
-        </span>
-      </div>
-
       <div
         className="relative rounded-[32px] sm:rounded-[44px] pt-8 sm:pt-12 px-6 sm:px-12 pb-0 border border-black/[0.08] shadow-none group transition-all duration-500 overflow-hidden min-h-[640px] lg:min-h-[680px] flex flex-col justify-between"
         style={{

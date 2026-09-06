@@ -72,10 +72,6 @@ const projectsData: PortfolioProjectCard[] = [
   },
 ];
 
-/**
- * 🏠 Home Component 2: Industry Grid with 5 Mockups & Animated Floating Dots
- * Pixel-perfect implementation matching user's custom design
- */
 export default function Home2_IndustryGrid() {
   return (
     <section className="portfolio-section-wrapper relative bg-[#F5F6FA] py-[100px] px-6 sm:px-10 overflow-hidden">
@@ -114,7 +110,7 @@ export default function Home2_IndustryGrid() {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="glass-surface industry-project-card group bg-white rounded-[28px] pt-[44px] px-[36px] pb-0 flex flex-col items-center border border-slate-200/80 shadow-[0px_25px_50px_rgba(0,0,0,0.1)] relative overflow-hidden min-h-[580px] transition-all duration-300 hover:shadow-[0px_35px_65px_rgba(0,0,0,0.15)]"
+              className="glass-surface industry-project-card group bg-white rounded-[28px] pt-[44px] px-[36px] pb-0 flex flex-col items-center border border-slate-200/80 relative overflow-hidden min-h-[580px]"
               style={{
                 backgroundImage: "radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px)",
                 backgroundSize: "20px 20px",
@@ -143,35 +139,35 @@ export default function Home2_IndustryGrid() {
                   <img loading="lazy" decoding="async"
                     src={project.mockups.farLeft}
                     alt={`${project.title} mockup 1`}
-                    className="mockup far-left absolute bottom-0 w-[150px] h-[230px] left-[30px] z-[2] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover transition-transform duration-350 ease-out"
+                    className="mockup far-left absolute bottom-0 w-[150px] h-[230px] left-[30px] z-[2] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover"
                   />
 
                   {/* Mid-Left */}
                   <img loading="lazy" decoding="async"
                     src={project.mockups.midLeft}
                     alt={`${project.title} mockup 2`}
-                    className="mockup mid-left absolute bottom-0 w-[180px] h-[270px] left-[110px] z-[4] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover transition-transform duration-350 ease-out"
+                    className="mockup mid-left absolute bottom-0 w-[180px] h-[270px] left-[110px] z-[4] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover"
                   />
 
                   {/* Center */}
                   <img loading="lazy" decoding="async"
                     src={project.mockups.center}
                     alt={`${project.title} main center mockup`}
-                    className="mockup center absolute bottom-0 w-[220px] h-[310px] z-[5] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover transition-transform duration-350 ease-out"
+                    className="mockup center absolute bottom-0 w-[220px] h-[310px] z-[5] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover"
                   />
 
                   {/* Mid-Right */}
                   <img loading="lazy" decoding="async"
                     src={project.mockups.midRight}
                     alt={`${project.title} mockup 4`}
-                    className="mockup mid-right absolute bottom-0 w-[180px] h-[270px] right-[110px] z-[4] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover transition-transform duration-350 ease-out"
+                    className="mockup mid-right absolute bottom-0 w-[180px] h-[270px] right-[110px] z-[4] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover"
                   />
 
                   {/* Far-Right */}
                   <img loading="lazy" decoding="async"
                     src={project.mockups.farRight}
                     alt={`${project.title} mockup 5`}
-                    className="mockup far-right absolute bottom-0 w-[150px] h-[230px] right-[30px] z-[2] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover transition-transform duration-350 ease-out"
+                    className="mockup far-right absolute bottom-0 w-[150px] h-[230px] right-[30px] z-[2] rounded-t-xl shadow-[0px_14px_30px_rgba(0,0,0,0.12)] object-cover"
                   />
                 </div>
               </div>
@@ -192,7 +188,7 @@ export default function Home2_IndustryGrid() {
         </div>
       </div>
 
-      {/* Embedded Component Styles for Exact Match with User Design */}
+      {/* Embedded Component Styles */}
       <style jsx>{`
         /* Floating Animated Background Circles */
         .bg-circle {
@@ -232,24 +228,49 @@ export default function Home2_IndustryGrid() {
           }
         }
 
-        /* 5 Mockups Layering & Rotations */
-        .mockup.mid-left {
-          transform: rotate(-8deg) translateY(-5px);
+        /* ---------------------------------------------------- */
+        /* ULTRA-SMOOTH CARD & SHADOW TRANSITIONS (IN & OUT) */
+        /* ---------------------------------------------------- */
+        .industry-project-card {
+          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.06);
+          transition: box-shadow 800ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      transform 800ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      border-color 800ms cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform, box-shadow;
         }
 
-        .mockup.mid-right {
-          transform: rotate(8deg) translateY(-5px);
+        .industry-project-card:hover {
+          box-shadow: 0px 35px 70px rgba(0, 0, 0, 0.14);
+          transform: translateY(-4px);
+        }
+
+        /* Mockup Base Transitions (Applies smoothly on both Hover & Leave) */
+        .mockup {
+          transition: transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform;
         }
 
         .mockup.far-left {
           transform: rotate(-16deg) translateY(-10px);
         }
 
+        .mockup.mid-left {
+          transform: rotate(-8deg) translateY(-5px);
+        }
+
+        .mockup.center {
+          transform: rotate(0deg) translateY(0px);
+        }
+
+        .mockup.mid-right {
+          transform: rotate(8deg) translateY(-5px);
+        }
+
         .mockup.far-right {
           transform: rotate(16deg) translateY(-10px);
         }
 
-        /* Interactive Card Hover Transforms on All 5 Images */
+        /* Mockup Hover State Animation */
         .industry-project-card:hover .mockup.far-left {
           transform: rotate(-22deg) translateX(-20px) translateY(-15px);
         }
@@ -259,7 +280,7 @@ export default function Home2_IndustryGrid() {
         }
 
         .industry-project-card:hover .mockup.center {
-          transform: translateY(-12px);
+          transform: translateY(-14px);
         }
 
         .industry-project-card:hover .mockup.mid-right {

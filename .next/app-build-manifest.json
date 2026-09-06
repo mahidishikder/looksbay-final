@@ -21,15 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/how-we-work/layout": [
+    "/portfolio/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/how-we-work/layout.js"
+      "static/chunks/app/portfolio/layout.js"
     ],
-    "/how-we-work/page": [
+    "/portfolio/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/how-we-work/page.js"
+      "static/chunks/app/portfolio/page.js"
     ]
   }
 }

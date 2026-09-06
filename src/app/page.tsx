@@ -8,6 +8,7 @@ import Home4_BentoMetrics from "@/components/home/Home4_BentoMetrics";
 import Home8_FaqSection from "@/components/home/Home8_FaqSection";
 import Home9_LeadHub from "@/components/home/Home9_LeadHub";
 import Home10_Footer from "@/components/home/Home10_Footer";
+import RevealOnScroll from "@/components/shared/RevealOnScroll";
 
 /**
  * 🏠 LOOKSBAY Main Home Page
@@ -20,19 +21,29 @@ export default function HomePage() {
       <Home1_HeroSection />
 
       {/* 2. Client & Industry Fanned Card Grid */}
-      <Home2_IndustryGrid />
+      <RevealOnScroll>
+        <Home2_IndustryGrid />
+      </RevealOnScroll>
 
       {/* 3. Signature Showcase Cards (Sticky Stacking on Scroll) */}
-      <Home3_ProjectShowcase />
+      <RevealOnScroll>
+        <Home3_ProjectShowcase />
+      </RevealOnScroll>
 
       {/* 4. Bento Metrics Section */}
-      <Home4_BentoMetrics />
+      <RevealOnScroll>
+        <Home4_BentoMetrics />
+      </RevealOnScroll>
 
       {/* 5. FAQ Accordion (Unified max-w-[1440px] matching all sections) */}
-      <Home8_FaqSection />
+      <RevealOnScroll>
+        <Home8_FaqSection />
+      </RevealOnScroll>
 
       {/* 6. Interactive Lead Calculator Hub */}
-      <Home9_LeadHub />
+      <RevealOnScroll>
+        <Home9_LeadHub />
+      </RevealOnScroll>
 
       {/* 7. Platform Footer */}
       <Home10_Footer />
