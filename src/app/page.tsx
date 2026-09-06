@@ -4,7 +4,8 @@ import React from "react";
 import Home1_HeroSection from "@/components/home/Home1_HeroSection";
 import Home2_IndustryGrid from "@/components/home/Home2_IndustryGrid";
 import Home3_ProjectShowcase from "@/components/home/Home3_ProjectShowcase";
-import Home4_BentoMetrics from "@/components/home/Home4_BentoMetrics";
+import HomeAgencyPositioning from "@/components/home/HomeAgencyPositioning";
+import HomeOutcomeProof from "@/components/home/HomeOutcomeProof";
 import Home8_FaqSection from "@/components/home/Home8_FaqSection";
 import Home9_LeadHub from "@/components/home/Home9_LeadHub";
 import Home10_Footer from "@/components/home/Home10_Footer";
@@ -20,19 +21,24 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <Home1_HeroSection />
 
-      {/* 2. Client & Industry Fanned Card Grid */}
+      {/* 2. Agency positioning, capabilities and engagement model */}
+      <RevealOnScroll>
+        <HomeAgencyPositioning />
+      </RevealOnScroll>
+
+      {/* 3. Client & Industry Fanned Card Grid */}
       <RevealOnScroll>
         <Home2_IndustryGrid />
       </RevealOnScroll>
 
-      {/* 3. Signature Showcase Cards (Sticky Stacking on Scroll) */}
+      {/* 4. Signature Showcase Cards (Sticky Stacking on Scroll) */}
       <RevealOnScroll>
         <Home3_ProjectShowcase />
       </RevealOnScroll>
 
-      {/* 4. Bento Metrics Section */}
+      {/* 5. Honest outcome proof */}
       <RevealOnScroll>
-        <Home4_BentoMetrics />
+        <HomeOutcomeProof />
       </RevealOnScroll>
 
       {/* 5. FAQ Accordion (Unified max-w-[1440px] matching all sections) */}
