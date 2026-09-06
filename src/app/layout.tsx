@@ -14,6 +14,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: "Looksbay",
+  category: "technology",
+  creator: "Looksbay",
+  publisher: "Looksbay",
   title: {
     default: "Looksbay | High-Performance Web Design Agency",
     template: "%s | Looksbay",
@@ -64,6 +68,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
@@ -73,20 +80,39 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Looksbay",
-    url: siteUrl,
-    logo: `${siteUrl}/images/hero_website_mockup.jpg`,
-    description: "High-performance web design, development and SEO services for ambitious businesses.",
-    areaServed: "Worldwide",
-    serviceType: [
-      "Website design",
-      "Website development",
-      "E-commerce development",
-      "Search engine optimization",
-      "Conversion rate optimization",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": `${siteUrl}/#organization`,
+        name: "Looksbay",
+        url: siteUrl,
+        image: `${siteUrl}/images/hero_website_mockup.jpg`,
+        description: "High-performance web design, development and SEO services for ambitious businesses.",
+        areaServed: "Worldwide",
+        priceRange: "$$$",
+        serviceType: [
+          "Website design",
+          "Website development",
+          "E-commerce development",
+          "Search engine optimization",
+          "Conversion rate optimization",
+        ],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          url: `${siteUrl}/contact`,
+          availableLanguage: ["English", "Bengali"],
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "Looksbay",
+        publisher: { "@id": `${siteUrl}/#organization` },
+        inLanguage: "en-US",
+      },
     ],
-    sameAs: ["https://github.com/mahidishikder/looksbay-final"],
   };
 
   return (

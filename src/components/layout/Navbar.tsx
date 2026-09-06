@@ -163,6 +163,17 @@ export default function Navbar() {
               </Link>
 
               <Link
+                href="/blog"
+                onMouseEnter={() => setServicesOpen(false)}
+                className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${pathname.startsWith("/blog")
+                  ? "text-white font-black bg-white/15 shadow-xs"
+                  : "text-zinc-300 hover:text-white hover:bg-white/10"
+                  }`}
+              >
+                Insights
+              </Link>
+
+              <Link
                 href="/contact"
                 onMouseEnter={() => setServicesOpen(false)}
                 className={`ml-1 px-5 py-2 rounded-full text-xs sm:text-sm font-black transition-all shadow-sm active:scale-95 flex items-center gap-1.5 ${pathname === "/contact"
@@ -373,6 +384,17 @@ export default function Navbar() {
                 Selected Works
               </Link>
 
+              <Link
+                href="/blog"
+                onClick={() => setMobileOpen(false)}
+                className={`px-4 py-2.5 rounded-xl text-sm font-bold transition-all ${pathname.startsWith("/blog")
+                  ? "bg-purple-100 text-purple-950 font-black"
+                  : "text-slate-700 hover:text-black hover:bg-slate-50"
+                  }`}
+              >
+                Insights
+              </Link>
+
               <button
                 onClick={() => {
                   setMobileOpen(false);
@@ -511,6 +533,17 @@ export default function Navbar() {
                 }`}
             >
               Works
+            </Link>
+
+            <Link
+              href="/blog"
+              onMouseEnter={() => setBottomServicesOpen(false)}
+              className={`hidden sm:inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${pathname.startsWith("/blog")
+                ? "text-white font-black bg-white/15 shadow-xs"
+                : "text-zinc-300 hover:text-white hover:bg-white/10"
+                }`}
+            >
+              Insights
             </Link>
 
             {/* CTA Button */}

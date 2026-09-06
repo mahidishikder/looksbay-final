@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import How1_Hero from "@/components/how-we-work/How1_Hero";
 import How2_VisualShowcase from "@/components/how-we-work/How2_VisualShowcase";

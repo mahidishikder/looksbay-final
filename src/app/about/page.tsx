@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import About1_Hero from "@/components/about/About1_Hero";
 import About2_SquadPhoto from "@/components/about/About2_SquadPhoto";

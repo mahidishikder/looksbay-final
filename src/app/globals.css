@@ -46,10 +46,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-  content-visibility: auto;
-}
-
 /* Parallax */
 .parallax-bg {
   background-attachment: fixed;

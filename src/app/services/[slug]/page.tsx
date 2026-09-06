@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: category ? `${category.heroTitle} ${category.heroHighlight}` : "Website Design Services",
     description: category?.heroDescription || "High-performance website design and development services from Looksbay.",
+    alternates: { canonical: `/services/${slug}` },
   };
 }
 

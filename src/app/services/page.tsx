@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Services1_Hero from "@/components/services/Services1_Hero";
 import Services2_IndustryGrid from "@/components/services/Services2_IndustryGrid";
