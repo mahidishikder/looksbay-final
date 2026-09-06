@@ -21,15 +21,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/portfolio/layout": [
+    "/how-we-work/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/portfolio/layout.js"
+      "static/chunks/app/how-we-work/layout.js"
     ],
-    "/portfolio/page": [
+    "/how-we-work/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/portfolio/page.js"
+      "static/chunks/app/how-we-work/page.js"
+    ],
+    "/services/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/layout.js"
+    ],
+    "/services/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/page.js"
     ]
   }
 }
