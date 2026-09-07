@@ -2,7 +2,7 @@
 
 import React from "react";
 import Home1_HeroSection from "@/components/home/Home1_HeroSection";
-import HomeProofIntro, { HomeAudiencePositioning, HomeFlagshipPortfolio } from "@/components/home/HomeProofIntro";
+import { HomeAudiencePositioning, HomeFlagshipPortfolio } from "@/components/home/HomeProofIntro";
 import Home2_IndustryGrid from "@/components/home/Home2_IndustryGrid";
 import Home3_ProjectShowcase from "@/components/home/Home3_ProjectShowcase";
 import HomeAgencyPositioning from "@/components/home/HomeAgencyPositioning";
@@ -22,31 +22,22 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <Home1_HeroSection />
 
-      {/* 2. Credibility positioning */}
-      <HomeProofIntro />
-
-      {/* 3. Audience positioning */}
-      <HomeAudiencePositioning />
-
-      {/* 4. Flagship portfolio positioning */}
-      <HomeFlagshipPortfolio />
-
-      {/* 5. Agency positioning, capabilities and engagement model */}
-      <RevealOnScroll>
-        <HomeAgencyPositioning />
-      </RevealOnScroll>
-
-      {/* 6. Client & Industry Fanned Card Grid */}
+      {/* 2. Client & Industry Fanned Card Grid */}
       <RevealOnScroll>
         <Home2_IndustryGrid />
       </RevealOnScroll>
 
-      {/* 7. Signature Showcase Cards (Sticky Stacking on Scroll) */}
+      {/* 3. Signature Showcase Cards (Sticky Stacking on Scroll) */}
       <RevealOnScroll>
         <Home3_ProjectShowcase />
       </RevealOnScroll>
 
-      {/* 8. Honest outcome proof */}
+      {/* 4. Agency positioning, capabilities and engagement model */}
+      <RevealOnScroll>
+        <HomeAgencyPositioning />
+      </RevealOnScroll>
+
+      {/* 5. Honest outcome proof */}
       <RevealOnScroll>
         <HomeOutcomeProof />
       </RevealOnScroll>

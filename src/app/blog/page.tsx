@@ -29,23 +29,24 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen overflow-x-clip bg-[#FAF8FF] text-slate-900">
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#4C1D95] via-[#581C87] to-[#3B0764] px-6 pb-20 pt-36 text-white sm:px-12 lg:px-20 lg:pb-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_10%,rgba(157,92,255,0.42),transparent_35%),radial-gradient(circle_at_10%_90%,rgba(204,255,0,0.10),transparent_30%)]" />
-        <div className="relative mx-auto max-w-[1400px]">
-          <div className="max-w-3xl">
+      {/* Hero Section - Content Centered */}
+      <section className="relative overflow-hidden bg-[#823EED] px-6 pb-20 pt-36 text-white sm:px-12 lg:px-20 lg:pb-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_10%,#823EED,transparent_35%),radial-gradient(circle_at_10%_90%,rgba(204,255,0,0.10),transparent_30%)]" />
+        <div className="relative mx-auto max-w-[1440px]">
+          <div className="mx-auto max-w-4xl text-center">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#CCFF00] backdrop-blur-md">
               <Sparkles className="h-3.5 w-3.5" />
               Looksbay Insights
             </div>
-            <h1 className="max-w-4xl text-4xl font-black leading-[1.02] tracking-tight sm:text-6xl lg:text-8xl">
+            <h1 className="mx-auto max-w-4xl text-4xl font-black leading-[1.02] tracking-tight sm:text-6xl lg:text-8xl">
               Better websites start with <span className="text-[#CCFF00]">better thinking.</span>
             </h1>
-            <p className="mt-7 max-w-2xl text-base font-medium leading-relaxed text-purple-100 sm:text-lg">
+            <p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-purple-100 sm:text-lg">
               Practical notes on strategy, design, performance and SEO for teams building their next important digital experience.
             </p>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-2" aria-label="Article categories">
+          <div className="mt-12 flex flex-wrap justify-center gap-2" aria-label="Article categories">
             {categories.map((category, index) => (
               <a
                 key={category}

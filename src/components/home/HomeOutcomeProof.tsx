@@ -16,7 +16,7 @@ const outcomes = [
 
 export default function HomeOutcomeProof() {
   return (
-    <section className="relative overflow-hidden bg-[#FAF8FF] px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
+    <section className="relative overflow-hidden bg-[#F8F3FF] px-6 py-24 sm:px-10 lg:px-16 lg:py-32">
       <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-[#9D5CFF]/[0.06] blur-[110px]" />
       <div className="mx-auto max-w-[1280px]">
         <RevealOnScroll>

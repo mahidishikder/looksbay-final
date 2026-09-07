@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "ddaa3908b1779135ffae2ae27fc0efd0",
-    "previewModeSigningKey": "ab6b98a304cad3dfbbef08179f918b9c75f3c6dec92c70dcd622dc12bc664694",
-    "previewModeEncryptionKey": "6c7f72fa1caa8e54954305ca4e3610caed15aa3e955d4b2cb152748911e906bf"
-  }
-}
+{"version":4,"routes":{"/services/real-estate":{},"/services/award-winning-websites":{},"/services/web-platforms-services":{},"/services/landing-page":{},"/services/corporate-website":{},"/services/non-profit":{},"/services/tech-data":{},"/services/logistics-fulfillment":{},"/services/healthcare-medical":{},"/services/automotive":{}},"dynamicRoutes":{"/services/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/services/[slug]","routeRegex":"^\\/services\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"c756a0dff15b1c3f02a79c4144f4646b","previewModeSigningKey":"770b423695610b551abeba65e9362c1dfa13cf919d21100fb48c163c8b993dc7","previewModeEncryptionKey":"75949a081555900b3890ad09accb2530a5d177533de3813378ea106243f0c55f"}}
