@@ -13,8 +13,8 @@ export default function Home10_Footer() {
       <div className="pointer-events-none absolute -right-32 -top-40 h-[420px] w-[420px] rounded-full bg-[#9D5CFF]/20 blur-[110px]" />
       <div className="pointer-events-none absolute -bottom-48 left-1/4 h-[360px] w-[360px] rounded-full bg-[#CCFF00]/8 blur-[100px]" />
       <div className="max-w-[1440px] mx-auto">
-        <div className="relative grid grid-cols-1 gap-12 border-b border-white/15 pb-14 lg:grid-cols-12 lg:gap-10">
-          <div className="space-y-5 lg:col-span-5">
+        <div className="relative grid grid-cols-1 gap-12 border-b border-white/15 pb-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+          <div className="space-y-5 md:col-span-2 lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-2 text-2xl font-black tracking-tight text-white">
               <span>LOOKSBAY</span>
               <span className="w-2.5 h-2.5 rounded-full bg-[#CCFF00]" />
@@ -27,7 +27,7 @@ export default function Home10_Footer() {
             </Link>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="md:col-span-1 lg:col-span-2">
             <h4 className="text-xs font-black uppercase tracking-[0.16em] text-[#CCFF00]">Quick links</h4>
             <ul className="mt-5 space-y-3 text-sm font-semibold text-purple-100">
               <li><Link href="/" className="transition-colors hover:text-white">Home</Link></li>
@@ -39,7 +39,7 @@ export default function Home10_Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="md:col-span-1 lg:col-span-2">
             <h4 className="text-xs font-black uppercase tracking-[0.16em] text-[#CCFF00]">Services</h4>
             <ul className="mt-5 space-y-3 text-sm font-semibold text-purple-100">
               <li><Link href="/services" className="transition-colors hover:text-white">Website design</Link></li>
@@ -51,7 +51,7 @@ export default function Home10_Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="md:col-span-2 lg:col-span-3">
             <h4 className="text-xs font-black uppercase tracking-[0.16em] text-[#CCFF00]">Built for growth</h4>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-purple-100">
               From the first strategy call to launch day and beyond, your digital experience stays fast, clear and ready to scale.

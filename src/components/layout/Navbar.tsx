@@ -89,7 +89,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 pt-4 sm:pt-6 px-4 sm:px-12 lg:px-20 pointer-events-none transition-all duration-500 ease-in-out ${scrolledPastThreshold
-          ? "md:-translate-y-full md:opacity-0 md:pointer-events-none translate-y-0 opacity-100"
+          ? "xl:-translate-y-full xl:opacity-0 xl:pointer-events-none translate-y-0 opacity-100"
           : "translate-y-0 opacity-100"
           }`}
       >
@@ -106,7 +106,7 @@ export default function Navbar() {
           </Link>
 
           {/* Center: Nav Capsule */}
-          <div className="relative hidden md:block">
+          <div className="relative hidden xl:block">
             <nav className="nav-glass flex items-center gap-1.5 px-3.5 py-1.5 rounded-full">
               {/* Services Trigger - ONLY THIS OPENS THE MEGA MENU */}
               <div
@@ -227,7 +227,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right: WhatsApp + Messenger Icons + Order Website Button */}
+          {/* Right: WhatsApp + Messenger Icons + Order Button */}
           <div className="flex items-center gap-2.5 sm:gap-3">
             {/* Website Order Popup Trigger Button */}
             <button
@@ -235,7 +235,7 @@ export default function Navbar() {
               className="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#CCFF00] hover:bg-[#d8ff33] text-black text-xs sm:text-sm font-black flex items-center gap-1.5 sm:gap-2 shadow-[0_0_25px_rgba(204,255,0,0.35)] hover:scale-105 active:scale-95 transition-all cursor-pointer"
             >
               <Sparkles className="w-3.5 h-3.5 text-black fill-black" />
-              <span>Order Website</span>
+              <span>Order</span>
             </button>
 
             <div className="relative hidden sm:block">
@@ -293,7 +293,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`md:hidden p-2.5 rounded-full shadow-sm border transition-colors ${isLight
+              className={`xl:hidden p-2.5 rounded-full shadow-sm border transition-colors ${isLight
                 ? "bg-white text-slate-900 border-slate-300 hover:bg-slate-100"
                 : "bg-black/60 text-white border-white/20 hover:bg-black/80"
                 }`}
@@ -308,7 +308,7 @@ export default function Navbar() {
           MOBILE MENU DRAWER
       ══════════════════════════════════════════════════════════ */}
         {mobileOpen && (
-          <div className="md:hidden mt-3 mx-auto max-w-sm rounded-3xl bg-white border border-slate-200 p-6 shadow-2xl pointer-events-auto space-y-4 animate-in fade-in slide-in-from-top-3 duration-200 text-slate-900 max-h-[80vh] overflow-y-auto">
+          <div className="xl:hidden mt-3 mx-auto w-full max-w-2xl rounded-3xl bg-white border border-slate-200 p-5 sm:p-6 md:p-8 shadow-2xl pointer-events-auto space-y-4 animate-in fade-in slide-in-from-top-3 duration-200 text-slate-900 max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col gap-1.5">
               {/* Mobile Services Accordion */}
               <div>
@@ -403,7 +403,7 @@ export default function Navbar() {
                 className="mt-2 w-full py-3 rounded-full text-xs font-black bg-[#CCFF00] text-black text-center shadow-lg flex items-center justify-center gap-2 hover:bg-[#d8ff33] cursor-pointer"
               >
                 <Sparkles className="w-3.5 h-3.5 text-black fill-black" />
-                <span>Order Website</span>
+                <span>Order</span>
               </button>
 
               <Link
@@ -422,7 +422,7 @@ export default function Navbar() {
         FLOATING BOTTOM MENU DOCK (Active when scrolled past ~30%)
     ══════════════════════════════════════════════════════════ */}
       <div
-        className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out max-w-[95vw] hidden md:block ${scrolledPastThreshold
+        className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out max-w-[95vw] hidden xl:block ${scrolledPastThreshold
           ? "translate-y-0 opacity-100 pointer-events-auto scale-100"
           : "translate-y-20 opacity-0 pointer-events-none scale-95"
           }`}
@@ -469,18 +469,6 @@ export default function Navbar() {
 
           {/* Nav Capsule matching top navbar dimensions & styling */}
           <nav className="flex items-center gap-1.5 bg-black/75 backdrop-blur-2xl px-3.5 py-1.5 rounded-full border border-white/20 shadow-[0_15px_50px_rgba(0,0,0,0.55)]">
-            {/* Brand Link */}
-            <Link
-              href="/"
-              onMouseEnter={() => setBottomServicesOpen(false)}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black tracking-tight text-white hover:text-[#CCFF00] transition-colors"
-            >
-              <span>LOOKSBAY</span>
-              <span className="w-2.5 h-2.5 rounded-full bg-[#CCFF00] animate-pulse" />
-            </Link>
-
-            <div className="w-px h-4 bg-white/20 hidden sm:block mx-0.5" />
-
             {/* Services Trigger with Mega Menu */}
             <div
               className="relative"
