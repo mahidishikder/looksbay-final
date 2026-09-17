@@ -11,7 +11,7 @@ import {
   Sparkles,
   ShieldCheck,
 } from "lucide-react";
-import Footer from "@/components/layout/Footer";
+import Home10_Footer from "@/components/home/Home10_Footer";
 
 interface Review {
   id: string;
@@ -161,19 +161,19 @@ export default function ReviewsPage() {
   });
 
   return (
-    <div className="relative min-h-screen bg-white text-[#0D0D0D] selection:bg-[#F4511E] selection:text-white overflow-x-clip">
+    <div className="relative min-h-screen bg-white text-[#0F0F0F] selection:bg-[#FC5001] selection:text-white overflow-x-clip">
       {/* Background Ambient Warm Orange Glow */}
       <div
         className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none rounded-full"
         style={{
-          background: "radial-gradient(circle at top right, rgba(244,81,30,0.12) 0%, rgba(255,122,48,0.04) 40%, transparent 70%)",
+          background: "radial-gradient(circle at top right, rgba(252,80,1,0.12) 0%, rgba(252,80,1,0.04) 40%, transparent 70%)",
         }}
       />
       {/* Vertical Stripe Texture */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "repeating-linear-gradient(90deg, #EAEAEA 0px, #EAEAEA 1px, transparent 1px, transparent 60px)",
+          backgroundImage: "repeating-linear-gradient(90deg, #F5F5F5 0px, #F5F5F5 1px, transparent 1px, transparent 60px)",
           opacity: 0.35,
         }}
       />
@@ -181,43 +181,43 @@ export default function ReviewsPage() {
       <div className="max-w-[1640px] mx-auto px-6 sm:px-10 lg:px-16 pt-32 sm:pt-36 pb-24 relative z-10">
         {/* ── HERO SUMMARY SECTION ── */}
         <section className="text-center max-w-4xl mx-auto space-y-6 mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0D0D0D] bg-white text-[12px] font-semibold text-[#0D0D0D] shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-[#F4511E] animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0F0F0F] bg-white text-[12px] font-semibold text-[#0F0F0F] shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#FC5001] animate-pulse" />
             <span>Squarespace Circle Platinum · 52 Verified Client Reviews · 99.8% CSAT</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#0D0D0D] tracking-tight leading-[1.06]">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-[#0F0F0F] tracking-tight leading-[1.06]">
             Don&apos;t take our word for it. <br />
-            <span className="text-[#F4511E]">Hear from our partners.</span>
+            <span className="text-[#FC5001]">Hear from our partners.</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-[#555555] max-w-2xl mx-auto leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-[#0F0F0F]/60 max-w-2xl mx-auto leading-relaxed font-normal">
             Over 320+ ambitious founders, coaches, and boutique brands have partnered with Looksbay to build high-converting Squarespace websites.
           </p>
 
           {/* Social Proof Stat Strip */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 max-w-3xl mx-auto">
-            <div className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EAEAEA] shadow-xs text-center">
-              <div className="text-3xl font-black text-[#0D0D0D] flex items-center justify-center gap-1">
+            <div className="p-5 rounded-2xl bg-[#F5F5F5] border border-[#0F0F0F]/10 shadow-xs text-center">
+              <div className="text-3xl font-black text-[#0F0F0F] flex items-center justify-center gap-1">
                 <span>4.9</span>
                 <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
               </div>
-              <div className="text-xs font-bold text-[#777777] mt-1">Clutch Rating</div>
+              <div className="text-xs font-bold text-[#0F0F0F]/50 mt-1">Clutch Rating</div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EAEAEA] shadow-xs text-center">
-              <div className="text-3xl font-black text-emerald-600">99.8%</div>
-              <div className="text-xs font-bold text-[#777777] mt-1">Client Satisfaction</div>
+              <div className="text-3xl font-black text-[#FC5001]">99.8%</div>
+              <div className="text-xs font-bold text-[#0F0F0F]/50 mt-1">Client Satisfaction</div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EAEAEA] shadow-xs text-center">
-              <div className="text-3xl font-black text-[#F4511E]">700+</div>
-              <div className="text-xs font-bold text-[#777777] mt-1">Squarespace Builds</div>
+              <div className="text-3xl font-black text-[#FC5001]">700+</div>
+              <div className="text-xs font-bold text-[#0F0F0F]/50 mt-1">Squarespace Builds</div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EAEAEA] shadow-xs text-center">
-              <div className="text-3xl font-black text-[#0D0D0D]">98+</div>
-              <div className="text-xs font-bold text-[#777777] mt-1">PageSpeed Score</div>
+              <div className="text-3xl font-black text-[#0F0F0F]">98+</div>
+              <div className="text-xs font-bold text-[#0F0F0F]/50 mt-1">PageSpeed Score</div>
             </div>
           </div>
         </section>
@@ -237,14 +237,14 @@ export default function ReviewsPage() {
                 onClick={() => setSelectedPlatform(platform)}
                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all shadow-xs flex items-center gap-2 ${
                   isActive
-                    ? "bg-[#0D0D0D] text-white shadow-md scale-105"
-                    : "bg-white text-[#555555] hover:text-[#0D0D0D] hover:border-[#0D0D0D] border border-[#E5E5E5]"
+                    ? "bg-[#0F0F0F] text-white shadow-md scale-105"
+                    : "bg-[#FFFFFF] text-[#0F0F0F]/60 hover:text-[#0F0F0F] hover:border-[#0F0F0F] border border-[#0F0F0F]/10"
                 }`}
               >
                 <span>{platform}</span>
                 <span
                   className={`px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold ${
-                    isActive ? "bg-[#F4511E] text-white" : "bg-[#F0F0F0] text-[#666666]"
+                    isActive ? "bg-[#FC5001] text-[#FFFFFF]" : "bg-[#F5F5F5] text-[#0F0F0F]/50"
                   }`}
                 >
                   {count}
@@ -259,7 +259,7 @@ export default function ReviewsPage() {
           {filteredReviews.map((item) => (
             <div
               key={item.id}
-              className="rounded-[32px] bg-white border border-[#E5E5E5] p-8 sm:p-10 shadow-xs hover:shadow-[0_16px_40px_rgba(244,81,30,0.08)] hover:border-[#F4511E] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+              className="rounded-[32px] bg-[#FFFFFF] border border-[#0F0F0F]/10 p-8 sm:p-10 shadow-xs hover:shadow-[0_16px_40px_rgba(252,80,1,0.08)] hover:border-[#FC5001] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
             >
               <div>
                 {/* Review Header: User Profile + Verified Platform Badge */}
@@ -270,25 +270,25 @@ export default function ReviewsPage() {
                       decoding="async"
                       src={item.avatar}
                       alt={item.name}
-                      className="w-13 h-13 rounded-full object-cover border-2 border-[#F4511E]/30 shadow-xs"
+                      className="w-13 h-13 rounded-full object-cover border-2 border-[#FC5001]/30 shadow-xs"
                     />
                     <div>
-                      <h3 className="text-lg font-bold text-[#0D0D0D] flex items-center gap-1.5">
+                      <h3 className="text-lg font-bold text-[#0F0F0F] flex items-center gap-1.5">
                         <span>{item.name}</span>
                         <span>{item.flag}</span>
                       </h3>
-                      <div className="text-xs text-[#666666] font-medium">
-                        {item.role} · <strong className="text-[#0D0D0D]">{item.company}</strong>
+                      <div className="text-xs text-[#0F0F0F]/50 font-medium">
+                        {item.role} · <strong className="text-[#0F0F0F]">{item.company}</strong>
                       </div>
-                      <div className="text-[11px] text-[#888888] font-mono mt-0.5">
+                      <div className="text-[11px] text-[#0F0F0F]/40 font-mono mt-0.5">
                         {item.location} · {item.date}
                       </div>
                     </div>
                   </div>
 
                   {/* Verified Pill */}
-                  <div className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center gap-1 shrink-0">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                  <div className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-[#FC5001]/10 border border-[#FC5001]/20 text-[#FC5001] flex items-center gap-1 shrink-0">
+                    <CheckCircle2 className="w-3 h-3 text-[#FC5001]" />
                     <span>{item.verifiedOn}</span>
                   </div>
                 </div>
@@ -298,30 +298,30 @@ export default function ReviewsPage() {
                   {[...Array(item.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
-                  <span className="text-xs font-bold text-[#0D0D0D] ml-2">5.0 / 5.0</span>
+                  <span className="text-xs font-bold text-[#0F0F0F] ml-2">5.0 / 5.0</span>
                 </div>
 
                 {/* Highlighted Quote Title */}
-                <h4 className="text-lg sm:text-xl font-bold text-[#0D0D0D] leading-snug mb-3 group-hover:text-[#F4511E] transition-colors">
+                <h4 className="text-lg sm:text-xl font-bold text-[#0F0F0F] leading-snug mb-3 group-hover:text-[#FC5001] transition-colors">
                   &ldquo;{item.title}&rdquo;
                 </h4>
 
                 {/* Body Content */}
-                <p className="text-xs sm:text-sm text-[#555555] leading-relaxed font-normal mb-6">
+                <p className="text-xs sm:text-sm text-[#0F0F0F]/60 leading-relaxed font-normal mb-6">
                   {item.review}
                 </p>
               </div>
 
               {/* Card Footer: Metrics Achieved & Platform */}
-              <div className="pt-4 border-t border-[#F0F0F0] flex items-center justify-between gap-4">
+              <div className="pt-4 border-t border-[#0F0F0F]/10 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
-                  <div className="px-3 py-1.5 rounded-xl bg-[#FFF4F0] border border-[#F4511E]/20">
-                    <span className="text-xs font-bold text-[#F4511E]">{item.metric.value}</span>{" "}
-                    <span className="text-[11px] font-medium text-[#555555]">{item.metric.label}</span>
+                  <div className="px-3 py-1.5 rounded-xl bg-[#FFF4F0] border border-[#FC5001]/20">
+                    <span className="text-xs font-bold text-[#FC5001]">{item.metric.value}</span>{" "}
+                    <span className="text-[11px] font-medium text-[#0F0F0F]/50">{item.metric.label}</span>
                   </div>
                 </div>
 
-                <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#0D0D0D] text-white">
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#0F0F0F] text-[#FFFFFF]">
                   {item.platform}
                 </span>
               </div>
@@ -330,38 +330,38 @@ export default function ReviewsPage() {
         </section>
 
         {/* ── BOTTOM CONVERSION BANNER ── */}
-        <section className="rounded-[36px] bg-[#0D0D0D] p-10 sm:p-16 text-white text-center shadow-2xl relative overflow-hidden border border-[#222222]">
+        <section className="rounded-[36px] bg-[#0F0F0F] p-10 sm:p-16 text-[#FFFFFF] text-center shadow-2xl relative overflow-hidden border border-[#FFFFFF]/10">
           <div
             className="absolute top-0 right-0 w-80 h-80 pointer-events-none rounded-full"
             style={{
-              background: "radial-gradient(circle, rgba(244,81,30,0.2) 0%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(252,80,1,0.2) 0%, transparent 70%)",
             }}
           />
 
           <div className="max-w-2xl mx-auto space-y-5 relative z-10">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#F4511E] text-xs font-bold uppercase tracking-wider">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#FC5001] text-xs font-bold uppercase tracking-wider">
               Ready to launch your vision?
             </span>
 
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white">
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight text-[#FFFFFF]">
               Let&apos;s build your next 5-star success story.
             </h2>
 
-            <p className="text-sm sm:text-base text-[#AAAAAA] leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-[#FFFFFF]/60 leading-relaxed font-normal">
               Direct access to our senior Squarespace pod and principal architects. Guaranteed 95+ PageSpeed score and 30-day post-launch warranty.
             </p>
 
             <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="px-8 py-4 rounded-full bg-[#F4511E] hover:bg-[#D83A07] text-white text-xs sm:text-sm font-bold inline-flex items-center gap-2 shadow-xl transition-all hover:scale-105 active:scale-95"
+                className="px-8 py-4 rounded-full bg-[#FC5001] hover:bg-[#FC5001]/90 text-[#FFFFFF] text-xs sm:text-sm font-bold inline-flex items-center gap-2 shadow-xl transition-all hover:scale-105 active:scale-95"
               >
                 <span>Start Your Project Sprint</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/portfolio"
-                className="px-7 py-4 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-xs sm:text-sm font-bold transition-all inline-flex items-center gap-2"
+                className="px-7 py-4 rounded-full bg-[#FFFFFF]/10 hover:bg-[#FFFFFF]/15 border border-[#FFFFFF]/20 text-[#FFFFFF] text-xs sm:text-sm font-bold transition-all inline-flex items-center gap-2"
               >
                 <span>Explore Selected Works</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -371,7 +371,7 @@ export default function ReviewsPage() {
         </section>
       </div>
 
-      <Footer />
+      <Home10_Footer />
     </div>
   );
 }

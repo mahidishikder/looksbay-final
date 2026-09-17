@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -64,7 +64,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
   };
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-white text-[#0D0D0D] selection:bg-[#F4511E] selection:text-white">
+    <div className="min-h-screen overflow-x-clip bg-white text-[#0F0F0F] selection:bg-[#FC5001] selection:text-white">
       <article>
         {/* Article Header */}
         <header className="relative overflow-hidden bg-white px-6 pb-14 pt-36 sm:px-10 lg:px-16 lg:pb-20 border-b border-[#EAEAEA]">
@@ -85,17 +85,17 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
           />
 
           <div className="relative mx-auto max-w-4xl">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#555555] transition-colors hover:text-[#F4511E]">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#555555] transition-colors hover:text-[#FC5001]">
               <ArrowLeft className="h-4 w-4" /> Back to all insights
             </Link>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#F4511E]">
+            <div className="mt-8 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#FC5001]">
               <span>{article.category}</span>
               <span className="h-1 w-1 rounded-full bg-[#CCCCCC]" />
               <span>{article.readTime}</span>
             </div>
 
-            <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-[#0D0D0D]">
+            <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-[#0F0F0F]">
               {article.title}
             </h1>
 
@@ -118,14 +118,14 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
           </div>
 
           <div className="mx-auto max-w-3xl pb-20 pt-12 sm:pt-16">
-            <p className="text-lg sm:text-xl font-bold leading-relaxed text-[#0D0D0D]">
+            <p className="text-lg sm:text-xl font-bold leading-relaxed text-[#0F0F0F]">
               {article.intro}
             </p>
 
             <div className="mt-10 space-y-10">
               {article.sections.map((section) => (
                 <section key={section.heading}>
-                  <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#0D0D0D]">
+                  <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-[#0F0F0F]">
                     {section.heading}
                   </h2>
                   <div className="mt-4 space-y-4 text-sm sm:text-base leading-relaxed text-[#555555]">
@@ -140,7 +140,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
             <div className="mt-14 border-t border-[#EAEAEA] pt-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-xs sm:text-sm font-bold bg-[#0D0D0D] hover:bg-[#F4511E] text-white shadow-sm transition-all hover:scale-105 active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-xs sm:text-sm font-bold bg-[#0F0F0F] hover:bg-[#FC5001] text-white shadow-sm transition-all hover:scale-105 active:scale-95"
               >
                 <span>Talk to the Looksbay team</span>
                 <ArrowRight className="h-4 w-4" />

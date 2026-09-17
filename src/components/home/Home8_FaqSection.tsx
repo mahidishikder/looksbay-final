@@ -14,24 +14,32 @@ const faqs: FaqItem[] = [
     a: "Squarespace 7.1 with Fluid Engine offers the ultimate balance: an award-winning drag-and-drop editor that your non-technical team can easily update, zero plugin conflicts, enterprise cloud security, and lightning fast performance without high maintenance retainers.",
   },
   {
+    q: "Do you offer Squarespace speed optimization and Core Web Vitals fixes?",
+    a: "Yes! We specialize in comprehensive Squarespace speed optimization. We compress images, optimize custom CSS/JavaScript code integration, eliminate render-blocking assets, and ensure your site achieves high PageSpeed scores and passes Google Core Web Vitals.",
+  },
+  {
+    q: "Can you fix Squarespace website bugs, mobile layout glitches, and custom CSS?",
+    a: "Absolutely. Our professional Squarespace developers handle custom CSS code injection, bespoke JavaScript integration, mobile responsive layout fixes, Fluid Engine overlapping bugs, and third-party API connectivity.",
+  },
+  {
+    q: "Can you set up Squarespace Acuity Scheduling and custom payment gateways?",
+    a: "Yes. We configure complete Acuity Scheduling calendars, intake forms, automated reminder emails, Stripe/PayPal checkout, digital product downloads, and membership subscriptions seamlessly.",
+  },
+  {
     q: "What perks do we receive through your Circle Platinum Partner status?",
     a: "As an authorized Squarespace Circle Platinum Partner, we grant our clients exclusive perks: an extended 6-month free trial so you never pay for hosting while setting up your site, plus 20% off your first year of any annual Squarespace hosting plan.",
   },
   {
+    q: "Can you execute a WordPress, Wix, or Shopify migration to Squarespace?",
+    a: "Yes. We migrate all your blog articles, portfolio items, product catalogs, and media into modern Squarespace 7.1 while configuring 301 URL redirects to ensure 100% of your Google rankings and backlinks are preserved.",
+  },
+  {
+    q: "How does your Squarespace SEO setup help rank my website on Google?",
+    a: "Every build includes deep on-page Squarespace SEO: comprehensive XML sitemap submission, Google Search Console indexing, semantic H1-H3 tagging, custom schema markup (LocalBusiness/Organization), optimized meta descriptions, and image alt text.",
+  },
+  {
     q: "How fast can we launch with a Looksbay template?",
     a: "Within 24 hours of purchase, we send a direct contributor transfer into your Squarespace account. Most of our clients plug in their copy and imagery and launch their website in 3 to 7 days.",
-  },
-  {
-    q: "Can you customize our template for us?",
-    a: "Yes! If you want a done-for-you launch, our 7-Day Fast-Track package handles all copy placement, brand color integration, domain connection, and launch QA in just 7 business days.",
-  },
-  {
-    q: "Can you migrate an existing website from WordPress or Wix?",
-    a: "Absolutely. We migrate all your blog articles, portfolio pages, and media files into modern Squarespace 7.1 while setting up 301 redirects to ensure 100% of your Google search rankings are preserved.",
-  },
-  {
-    q: "Will we be able to easily edit our website after launch?",
-    a: "Yes. Every template and custom build includes personalized video walkthroughs. You can edit text, swap photos, add blog posts, and manage products with complete confidence and zero developer dependency.",
   },
 ];
 
@@ -39,18 +47,18 @@ export default function Home8_FaqSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <section className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-white text-[#0D0D0D] border-t border-[#E5E5E5]">
+    <section className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-[#FFFFFF] text-[#0F0F0F] border-t border-[#0F0F0F]/10">
       <div className="max-w-[900px] mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-[0.22em] text-[#F4511E] font-semibold mb-3">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#FC5001] font-semibold mb-3">
             Common Questions
           </p>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0D0D0D]">
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0F0F0F]">
             Frequently Asked Questions.
           </h2>
         </div>
 
-        <div className="divide-y divide-[#E5E5E5]">
+        <div className="divide-y divide-[#0F0F0F]/10">
           {faqs.map((faq, index) => {
             const isOpen = openFaq === index;
             return (
@@ -60,20 +68,18 @@ export default function Home8_FaqSection() {
                   onClick={() => setOpenFaq(isOpen ? null : index)}
                   className="w-full flex items-center justify-between text-left gap-4 group"
                 >
-                  <span className="text-lg sm:text-xl font-bold text-[#0D0D0D] group-hover:text-[#F4511E] transition-colors">
+                  <span className="text-base sm:text-lg font-bold text-[#0F0F0F] group-hover:text-[#FC5001] transition-colors">
                     {faq.q}
                   </span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#6B6B6B] shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#F4511E]" : ""
-                    }`}
-                  />
+                  <span className={`w-8 h-8 rounded-full border border-[#0F0F0F]/10 flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 bg-[#FC5001] text-[#FFFFFF] border-[#FC5001]" : "text-[#0F0F0F]"}`}>
+                    <ChevronDown className="w-4 h-4" />
+                  </span>
                 </button>
 
                 {isOpen && (
-                  <p className="mt-4 text-sm sm:text-base text-[#6B6B6B] leading-relaxed pr-8 animate-fade-in">
+                  <div className="mt-4 text-xs sm:text-sm text-[#0F0F0F]/70 leading-relaxed max-w-3xl animate-in fade-in duration-200">
                     {faq.a}
-                  </p>
+                  </div>
                 )}
               </div>
             );

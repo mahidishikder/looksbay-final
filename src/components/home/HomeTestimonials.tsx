@@ -25,13 +25,13 @@ const reviews = [
 
 export default function HomeTestimonials() {
   return (
-    <section className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-white text-[#0D0D0D] border-t border-[#E5E5E5]">
+    <section className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-[#FFFFFF] text-[#0F0F0F] border-t border-[#0F0F0F]/10">
       <div className="max-w-[1640px] mx-auto">
         <div className="text-center max-w-xl mx-auto mb-16">
-          <p className="text-xs uppercase tracking-[0.22em] text-[#F4511E] font-semibold mb-3">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#FC5001] font-semibold mb-3">
             Client Praise
           </p>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0D0D0D]">
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#0F0F0F]">
             Kind words from founders we love.
           </h2>
         </div>
@@ -40,25 +40,25 @@ export default function HomeTestimonials() {
           {reviews.map((rev) => (
             <div
               key={rev.name}
-              className="bg-[#F8F8F8] border border-[#E5E5E5] hover:border-[#F4511E] p-8 sm:p-10 flex flex-col justify-between space-y-6 transition-all duration-300 hover:shadow-lg hover:shadow-orange-50"
+              className="bg-[#F5F5F5] border border-[#0F0F0F]/10 hover:border-[#FC5001] p-8 sm:p-10 flex flex-col justify-between space-y-6 transition-all duration-300 hover:shadow-lg rounded-xs"
             >
-              <div className="flex items-center gap-1 text-[#F4511E]">
+              <div className="flex items-center gap-1 text-[#FC5001]">
                 {[...Array(rev.stars)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[#F4511E]" />
+                  <Star key={i} className="w-4 h-4 fill-[#FC5001]" />
                 ))}
               </div>
 
-              <blockquote className="text-base sm:text-lg text-[#3D3D3D] font-normal leading-relaxed italic">
+              <blockquote className="text-base sm:text-lg text-[#0F0F0F]/85 font-normal leading-relaxed italic">
                 &ldquo;{rev.quote}&rdquo;
               </blockquote>
 
-              <div className="flex items-center gap-4 pt-4 border-t border-[#E5E5E5]">
-                <div className="relative w-12 h-12 overflow-hidden shrink-0 border-2 border-[#F4511E]">
+              <div className="flex items-center gap-4 pt-4 border-t border-[#0F0F0F]/10">
+                <div className="relative w-12 h-12 overflow-hidden shrink-0 border-2 border-[#FC5001]">
                   <Image src={rev.avatar} alt={rev.name} fill className="object-cover" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-[#0D0D0D]">{rev.name}</div>
-                  <div className="text-xs text-[#6B6B6B]">{rev.role}</div>
+                  <div className="text-sm font-bold text-[#0F0F0F]">{rev.name}</div>
+                  <div className="text-xs text-[#0F0F0F]/60">{rev.role}</div>
                 </div>
               </div>
             </div>

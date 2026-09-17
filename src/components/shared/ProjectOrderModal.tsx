@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { X, CheckCircle2, ArrowRight } from "lucide-react";
@@ -44,13 +44,13 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md animate-fade-in">
       <div
-        className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-[#E5E5E5] overflow-hidden"
+        className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-[#0F0F0F]/10 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={handleResetAndClose}
-          className="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#F5F5F5] hover:bg-[#EAEAEA] text-[#555555] hover:text-[#0D0D0D] flex items-center justify-center transition-colors z-10"
+          className="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#F5F5F5] hover:bg-[#EAEAEA] text-[#555555] hover:text-[#0F0F0F] flex items-center justify-center transition-colors z-10"
           aria-label="Close modal"
         >
           <X className="w-4 h-4" />
@@ -61,14 +61,14 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
             <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 mx-auto flex items-center justify-center">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-bold text-[#0D0D0D]">Inquiry Received</h3>
+            <h3 className="text-2xl font-bold text-[#0F0F0F]">Inquiry Received</h3>
             <p className="text-sm text-[#666666] max-w-sm mx-auto leading-relaxed">
-              Thank you, <span className="font-semibold text-[#0D0D0D]">{name}</span>. We will review your project requirements and reply at <span className="font-semibold text-[#0D0D0D]">{email}</span> within 24 hours.
+              Thank you, <span className="font-semibold text-[#0F0F0F]">{name}</span>. We will review your project requirements and reply at <span className="font-semibold text-[#0F0F0F]">{email}</span> within 24 hours.
             </p>
             <div className="pt-4">
               <button
                 onClick={handleResetAndClose}
-                className="px-6 py-2.5 rounded-full text-xs font-bold bg-[#0D0D0D] text-white hover:bg-[#F4511E] transition-colors"
+                className="px-6 py-2.5 rounded-full text-xs font-bold bg-[#0F0F0F] text-white hover:bg-[#FC5001] transition-colors"
               >
                 Close Window
               </button>
@@ -77,11 +77,11 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
         ) : (
           <form onSubmit={handleSubmit} className="p-6 sm:p-10 space-y-6">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFF4F0] border border-[#F4511E]/20 text-xs font-bold text-[#F4511E] uppercase tracking-wider mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F4511E]" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFF4F0] border border-[#FC5001]/20 text-xs font-bold text-[#FC5001] uppercase tracking-wider mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FC5001]" />
                 <span>Start A Project</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-[#0D0D0D] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0F0F0F] tracking-tight">
                 Let&apos;s build your Squarespace.
               </h2>
               <p className="text-xs sm:text-sm text-[#666666] mt-1">
@@ -91,7 +91,7 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
 
             {/* Service Selection */}
             <div>
-              <label className="block text-xs font-bold text-[#0D0D0D] mb-2">
+              <label className="block text-xs font-bold text-[#0F0F0F] mb-2">
                 What service do you need?
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -102,8 +102,8 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
                     onClick={() => setSelectedService(service)}
                     className={`px-3.5 py-2.5 rounded-xl text-xs font-medium text-left border transition-all ${
                       selectedService === service
-                        ? "border-[#F4511E] bg-[#FFF4F0] text-[#F4511E] font-bold"
-                        : "border-[#E5E5E5] text-[#555555] hover:border-[#0D0D0D]"
+                        ? "border-[#FC5001] bg-[#FFF4F0] text-[#FC5001] font-bold"
+                        : "border-[#0F0F0F]/10 text-[#555555] hover:border-[#0F0F0F]"
                     }`}
                   >
                     {service}
@@ -115,7 +115,7 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
             {/* Name & Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs font-bold text-[#0D0D0D] mb-1">
+                <label className="block text-xs font-bold text-[#0F0F0F] mb-1">
                   Your Name *
                 </label>
                 <input
@@ -124,11 +124,11 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
                   placeholder="Elena Rostova"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-[#F8F8F8] border border-[#E5E5E5] focus:border-[#F4511E] focus:bg-white focus:outline-none transition-colors text-[#0D0D0D]"
+                  className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-[#F5F5F5] border border-[#0F0F0F]/10 focus:border-[#FC5001] focus:bg-white focus:outline-none transition-colors text-[#0F0F0F]"
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold text-[#0D0D0D] mb-1">
+                <label className="block text-xs font-bold text-[#0F0F0F] mb-1">
                   Email Address *
                 </label>
                 <input
@@ -137,14 +137,14 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
                   placeholder="elena@studio.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-[#F8F8F8] border border-[#E5E5E5] focus:border-[#F4511E] focus:bg-white focus:outline-none transition-colors text-[#0D0D0D]"
+                  className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-[#F5F5F5] border border-[#0F0F0F]/10 focus:border-[#FC5001] focus:bg-white focus:outline-none transition-colors text-[#0F0F0F]"
                 />
               </div>
             </div>
 
             {/* Budget */}
             <div>
-              <label className="block text-xs font-bold text-[#0D0D0D] mb-2">
+              <label className="block text-xs font-bold text-[#0F0F0F] mb-2">
                 Estimated Budget
               </label>
               <div className="flex flex-wrap gap-2">
@@ -155,8 +155,8 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
                     onClick={() => setSelectedBudget(budget)}
                     className={`px-4 py-2 rounded-full text-xs transition-all ${
                       selectedBudget === budget
-                        ? "bg-[#0D0D0D] text-white font-bold"
-                        : "bg-[#F5F5F5] border border-[#E5E5E5] text-[#555555] hover:border-[#0D0D0D]"
+                        ? "bg-[#0F0F0F] text-white font-bold"
+                        : "bg-[#F5F5F5] border border-[#0F0F0F]/10 text-[#555555] hover:border-[#0F0F0F]"
                     }`}
                   >
                     {budget}
@@ -167,7 +167,7 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
 
             {/* Message / Brief */}
             <div>
-              <label className="block text-xs font-bold text-[#0D0D0D] mb-1">
+              <label className="block text-xs font-bold text-[#0F0F0F] mb-1">
                 Project Details
               </label>
               <textarea
@@ -175,14 +175,14 @@ export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModal
                 placeholder="Share your timeline, current website link, or brand goals..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-[#F8F8F8] border border-[#E5E5E5] focus:border-[#F4511E] focus:bg-white focus:outline-none transition-colors resize-none text-[#0D0D0D]"
+                className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-[#F5F5F5] border border-[#0F0F0F]/10 focus:border-[#FC5001] focus:bg-white focus:outline-none transition-colors resize-none text-[#0F0F0F]"
               />
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3.5 rounded-full bg-[#F4511E] hover:bg-[#D83A07] active:scale-[0.99] text-white text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all shadow-md"
+              className="w-full py-3.5 rounded-full bg-[#FC5001] hover:bg-[#D83A07] active:scale-[0.99] text-white text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all shadow-md"
             >
               <span>Submit Project Inquiry</span>
               <ArrowRight className="w-4 h-4" />

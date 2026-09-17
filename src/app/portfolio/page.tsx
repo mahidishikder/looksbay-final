@@ -9,29 +9,23 @@ import Work5_InquiryCard from "@/components/work/Work5_InquiryCard";
 import Work6_PreviewModal from "@/components/work/Work6_PreviewModal";
 import Home10_Footer from "@/components/home/Home10_Footer";
 
-/**
- * 💼 LOOKSBAY Selected Works / Portfolio Page
- * Matches the clean Looksbay Home style with white background, warm orange accents, and Home10_Footer
- */
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [previewProject, setPreviewProject] = useState<PortfolioProject | null>(null);
 
   return (
-    <div className="relative min-h-screen bg-white text-[#0D0D0D] selection:bg-[#F4511E] selection:text-white">
-      {/* Background Subtle Warm Orange Ambient Glow */}
+    <div className="relative min-h-screen bg-[#FFFFFF] text-[#0F0F0F] selection:bg-[#FC5001] selection:text-[#FFFFFF]">
+      {/* Background Subtle Gradient Glow linking Left and Right */}
       <div
         className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none rounded-full"
         style={{
-          background: "radial-gradient(circle at top right, rgba(244,81,30,0.12) 0%, rgba(255,122,48,0.04) 40%, transparent 70%)",
+          background: "radial-gradient(circle at top right, rgba(252,80,1,0.12) 0%, transparent 70%)",
         }}
       />
-      {/* Vertical Stripe Texture */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute top-0 left-0 w-[500px] h-[500px] pointer-events-none rounded-full"
         style={{
-          backgroundImage: "repeating-linear-gradient(90deg, #EAEAEA 0px, #EAEAEA 1px, transparent 1px, transparent 60px)",
-          opacity: 0.35,
+          background: "radial-gradient(circle at top left, rgba(252,80,1,0.06) 0%, transparent 65%)",
         }}
       />
 
@@ -59,7 +53,7 @@ export default function PortfolioPage() {
         onClose={() => setPreviewProject(null)}
       />
 
-      {/* Official Looksbay Luxury Footer */}
+      {/* Looksbay Luxury Footer */}
       <Home10_Footer />
     </div>
   );

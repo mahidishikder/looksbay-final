@@ -8,15 +8,15 @@ export default function WorkTabsSection() {
   const [activeTab, setActiveTab] = useState<"works" | "why" | "team">("works");
 
   return (
-    <section className="py-20 border-t border-[#EAEAEA]">
+    <section className="py-20 border-t border-[#0F0F0F]/10">
       {/* 3-TAB SELECTOR BUTTONS */}
-      <div className="flex justify-center items-center gap-4 sm:gap-8 mb-14 border-b border-[#EAEAEA] pb-4 max-w-xl mx-auto">
+      <div className="flex justify-center items-center gap-4 sm:gap-8 mb-14 border-b border-[#0F0F0F]/10 pb-4 max-w-xl mx-auto">
         <button
           onClick={() => setActiveTab("works")}
           className={`px-4 sm:px-6 py-2.5 text-base sm:text-xl font-bold transition-all relative ${
             activeTab === "works"
-              ? "text-[#0D0D0D] after:absolute after:-bottom-4 after:left-0 after:right-0 after:h-1 after:bg-[#F4511E] after:rounded-full"
-              : "text-[#888888] hover:text-[#0D0D0D]"
+              ? "text-[#0F0F0F] after:absolute after:-bottom-4 after:left-0 after:right-0 after:h-1 after:bg-[#FC5001] after:rounded-full"
+              : "text-[#0F0F0F]/50 hover:text-[#0F0F0F]"
           }`}
         >
           Works
@@ -26,8 +26,8 @@ export default function WorkTabsSection() {
           onClick={() => setActiveTab("why")}
           className={`px-4 sm:px-6 py-2.5 text-base sm:text-xl font-bold transition-all relative ${
             activeTab === "why"
-              ? "text-[#0D0D0D] after:absolute after:-bottom-4 after:left-0 after:right-0 after:h-1 after:bg-[#F4511E] after:rounded-full"
-              : "text-[#888888] hover:text-[#0D0D0D]"
+              ? "text-[#0F0F0F] after:absolute after:-bottom-4 after:left-0 after:right-0 after:h-1 after:bg-[#FC5001] after:rounded-full"
+              : "text-[#0F0F0F]/50 hover:text-[#0F0F0F]"
           }`}
         >
           Why choose us
@@ -37,8 +37,8 @@ export default function WorkTabsSection() {
           onClick={() => setActiveTab("team")}
           className={`px-4 sm:px-6 py-2.5 text-base sm:text-xl font-bold transition-all relative ${
             activeTab === "team"
-              ? "text-[#0D0D0D] after:absolute after:-bottom-4 after:left-0 after:right-0 after:h-1 after:bg-[#F4511E] after:rounded-full"
-              : "text-[#888888] hover:text-[#0D0D0D]"
+              ? "text-[#0F0F0F] after:absolute after:-bottom-4 after:left-0 after:right-0 after:h-1 after:bg-[#FC5001] after:rounded-full"
+              : "text-[#0F0F0F]/50 hover:text-[#0F0F0F]"
           }`}
         >
           Our Team
@@ -61,18 +61,18 @@ export default function WorkTabsSection() {
                 return (
                   <div
                     key={i}
-                    className="p-6 rounded-3xl bg-white border border-[#E5E5E5] shadow-xs text-center hover:border-[#F4511E] hover:shadow-md transition-all"
+                    className="p-6 rounded-3xl bg-[#FFFFFF] border border-[#0F0F0F]/10 shadow-xs text-center hover:border-[#FC5001] hover:shadow-md transition-all"
                   >
-                    <div className="w-10 h-10 rounded-2xl bg-[#FFF4F0] text-[#F4511E] mx-auto flex items-center justify-center mb-3">
+                    <div className="w-10 h-10 rounded-2xl bg-[#F5F5F5] text-[#FC5001] mx-auto flex items-center justify-center mb-3">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <div className="text-3xl sm:text-4xl font-black text-[#0D0D0D] tracking-tight">
+                    <div className="text-3xl sm:text-4xl font-black text-[#0F0F0F] tracking-tight">
                       {stat.value}
                     </div>
-                    <div className="text-xs sm:text-sm font-bold text-[#0D0D0D] mt-1">
+                    <div className="text-xs sm:text-sm font-bold text-[#0F0F0F] mt-1">
                       {stat.label}
                     </div>
-                    <div className="text-[11px] text-[#777777] mt-0.5">
+                    <div className="text-[11px] text-[#0F0F0F]/60 mt-0.5">
                       {stat.desc}
                     </div>
                   </div>
@@ -80,27 +80,27 @@ export default function WorkTabsSection() {
               })}
             </div>
 
-            <div className="p-8 sm:p-10 rounded-3xl bg-[#0D0D0D] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
+            <div className="p-8 sm:p-10 rounded-3xl bg-[#0F0F0F] text-[#FFFFFF] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
               <div
                 className="absolute top-0 right-0 w-[300px] h-[300px] pointer-events-none rounded-full"
                 style={{
-                  background: "radial-gradient(circle, rgba(244,81,30,0.2) 0%, transparent 70%)",
+                  background: "radial-gradient(circle, rgba(252,80,1,0.2) 0%, transparent 70%)",
                 }}
               />
               <div className="relative z-10">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F4511E]">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#FC5001]">
                   Squarespace Circle Platinum Studio
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-black mt-1 text-white">
+                <h3 className="text-2xl sm:text-3xl font-black mt-1 text-[#FFFFFF]">
                   Ready to deploy your next high-converting website?
                 </h3>
-                <p className="text-sm text-[#AAAAAA] mt-2 max-w-xl font-normal">
+                <p className="text-sm text-[#FFFFFF]/70 mt-2 max-w-xl font-normal">
                   Whether you need a custom Squarespace 7.1 build, a 7-day designer template customization, or a seamless WordPress migration, our squad delivers with speed and precision.
                 </p>
               </div>
               <Link
                 href="/contact"
-                className="relative z-10 px-7 py-3.5 rounded-full bg-[#F4511E] hover:bg-[#D83A07] text-white text-xs sm:text-sm font-bold whitespace-nowrap shadow-lg inline-flex items-center gap-2 transition-all hover:scale-105 active:scale-95"
+                className="relative z-10 px-7 py-3.5 rounded-full bg-[#FC5001] hover:opacity-90 text-[#FFFFFF] text-xs sm:text-sm font-bold whitespace-nowrap shadow-lg inline-flex items-center gap-2 transition-all hover:scale-105 active:scale-95"
               >
                 <span>Schedule Consultation</span>
                 <ArrowRight className="w-4 h-4" />
@@ -142,21 +142,21 @@ export default function WorkTabsSection() {
               return (
                 <div
                   key={i}
-                  className="p-8 rounded-3xl bg-white border border-[#E5E5E5] shadow-xs hover:border-[#F4511E] hover:shadow-md transition-all flex flex-col justify-between"
+                  className="p-8 rounded-3xl bg-[#FFFFFF] border border-[#0F0F0F]/10 shadow-xs hover:border-[#FC5001] hover:shadow-md transition-all flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 rounded-2xl bg-[#FFF4F0] text-[#F4511E] flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-2xl bg-[#F5F5F5] text-[#FC5001] flex items-center justify-center">
                         <Icon className="w-5 h-5" />
                       </div>
-                      <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F8F8F8] border border-[#EAEAEA] text-[#555555]">
+                      <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F5F5F5] border border-[#0F0F0F]/10 text-[#0F0F0F]/70">
                         {pillar.badge}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[#0D0D0D] mb-2">
+                    <h3 className="text-xl font-bold text-[#0F0F0F] mb-2">
                       {pillar.title}
                     </h3>
-                    <p className="text-sm text-[#666666] leading-relaxed font-normal">
+                    <p className="text-sm text-[#0F0F0F]/70 leading-relaxed font-normal">
                       {pillar.desc}
                     </p>
                   </div>
@@ -195,9 +195,9 @@ export default function WorkTabsSection() {
               ].map((member, i) => (
                 <div
                   key={i}
-                  className="p-6 rounded-3xl bg-white border border-[#E5E5E5] shadow-xs text-center flex flex-col items-center hover:border-[#F4511E] transition-all"
+                  className="p-6 rounded-3xl bg-[#FFFFFF] border border-[#0F0F0F]/10 shadow-xs text-center flex flex-col items-center hover:border-[#FC5001] transition-all"
                 >
-                  <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-[#F4511E]/30 p-0.5 shadow-sm">
+                  <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-[#FC5001]/30 p-0.5 shadow-xs">
                     <img
                       loading="lazy"
                       decoding="async"
@@ -206,25 +206,25 @@ export default function WorkTabsSection() {
                       className="w-full h-full object-cover rounded-full"
                     />
                   </div>
-                  <h4 className="text-lg font-bold text-[#0D0D0D]">
+                  <h4 className="text-lg font-bold text-[#0F0F0F]">
                     {member.name}
                   </h4>
-                  <div className="text-xs font-semibold text-[#F4511E] mt-0.5">
+                  <div className="text-xs font-semibold text-[#FC5001] mt-0.5">
                     {member.role}
                   </div>
-                  <div className="text-[11px] text-[#777777] font-medium mt-1">
+                  <div className="text-[11px] text-[#0F0F0F]/60 font-medium mt-1">
                     {member.exp}
                   </div>
-                  <div className="mt-4 pt-3 border-t border-[#F0F0F0] text-xs text-[#555555] font-normal">
+                  <div className="mt-4 pt-3 border-t border-[#0F0F0F]/10 text-xs text-[#0F0F0F]/70 font-normal">
                     {member.specialty}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EAEAEA] text-center max-w-2xl mx-auto">
-              <div className="flex items-center justify-center gap-2 text-xs font-bold text-[#0D0D0D]">
-                <Users className="w-4 h-4 text-[#F4511E]" />
+            <div className="p-5 rounded-2xl bg-[#F5F5F5] border border-[#0F0F0F]/10 text-center max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-2 text-xs font-bold text-[#0F0F0F]">
+                <Users className="w-4 h-4 text-[#FC5001]" />
                 <span>Backed by 17 dedicated senior developers, QA engineers, and technical designers.</span>
               </div>
             </div>

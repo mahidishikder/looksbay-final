@@ -28,15 +28,15 @@ function ContactFormInner() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl p-8 sm:p-10 bg-white text-center space-y-4 border border-[#E5E5E5] shadow-xs">
-        <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto">
+      <div className="rounded-2xl p-8 sm:p-10 bg-[#FFFFFF] text-center space-y-4 border border-[#0F0F0F]/10 shadow-xs">
+        <div className="w-14 h-14 rounded-full bg-[#F5F5F5] text-[#FC5001] flex items-center justify-center mx-auto">
           <CheckCircle2 className="w-7 h-7" />
         </div>
-        <h3 className="text-2xl font-bold text-[#0D0D0D]">
+        <h3 className="text-2xl font-bold text-[#0F0F0F]">
           Project Inquiry Received
         </h3>
-        <p className="text-xs sm:text-sm text-[#666666] max-w-sm mx-auto leading-relaxed">
-          Thank you, <span className="font-semibold text-[#0D0D0D]">{name}</span>. We will review your project details and reply at <span className="font-semibold text-[#0D0D0D]">{email}</span> within 24 hours.
+        <p className="text-xs sm:text-sm text-[#0F0F0F]/70 max-w-sm mx-auto leading-relaxed">
+          Thank you, <span className="font-bold text-[#0F0F0F]">{name}</span>. We will review your project details and reply at <span className="font-bold text-[#0F0F0F]">{email}</span> within 24 hours.
         </p>
       </div>
     );
@@ -46,7 +46,7 @@ function ContactFormInner() {
     <form onSubmit={handleSubmit} className="space-y-5">
       {/* Service Selection */}
       <div>
-        <label className="text-xs font-bold text-[#0D0D0D] block mb-2">
+        <label className="text-xs font-bold text-[#0F0F0F] block mb-2">
           Select Service
         </label>
         <div className="grid grid-cols-2 gap-2">
@@ -57,8 +57,8 @@ function ContactFormInner() {
               onClick={() => setService(item)}
               className={`p-2.5 rounded-xl text-xs text-left border transition-all ${
                 service === item
-                  ? "bg-[#FFF4F0] border-[#F4511E] text-[#F4511E] font-bold"
-                  : "bg-white border-[#E5E5E5] text-[#555555] hover:border-[#0D0D0D]"
+                  ? "bg-[#F5F5F5] border-[#FC5001] text-[#FC5001] font-bold"
+                  : "bg-[#FFFFFF] border-[#0F0F0F]/10 text-[#0F0F0F]/70 hover:border-[#0F0F0F]"
               }`}
             >
               {item}
@@ -69,7 +69,7 @@ function ContactFormInner() {
 
       {/* Budget Tier */}
       <div>
-        <label className="text-xs font-bold text-[#0D0D0D] block mb-2">
+        <label className="text-xs font-bold text-[#0F0F0F] block mb-2">
           Estimated Budget
         </label>
         <div className="flex flex-wrap gap-2">
@@ -80,8 +80,8 @@ function ContactFormInner() {
               onClick={() => setBudget(tier)}
               className={`px-4 py-2 rounded-full text-xs transition-all ${
                 budget === tier
-                  ? "bg-[#0D0D0D] text-white font-bold"
-                  : "bg-white border border-[#E5E5E5] text-[#666666] hover:border-[#0D0D0D]"
+                  ? "bg-[#0F0F0F] text-[#FFFFFF] font-bold"
+                  : "bg-[#FFFFFF] border border-[#0F0F0F]/10 text-[#0F0F0F]/70 hover:border-[#0F0F0F]"
               }`}
             >
               {tier}
@@ -93,7 +93,7 @@ function ContactFormInner() {
       {/* Inputs */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="text-xs font-bold text-[#0D0D0D] block mb-1">
+          <label className="text-xs font-bold text-[#0F0F0F] block mb-1">
             Your Name *
           </label>
           <input
@@ -102,12 +102,12 @@ function ContactFormInner() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Steve Jobs"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E5E5E5] text-xs text-[#0D0D0D] focus:outline-none focus:border-[#F4511E] transition-colors placeholder:text-[#999999]"
+            className="w-full px-3.5 py-2.5 rounded-xl bg-[#FFFFFF] border border-[#0F0F0F]/10 text-xs text-[#0F0F0F] focus:outline-none focus:border-[#FC5001] transition-colors placeholder:text-[#0F0F0F]/40"
           />
         </div>
 
         <div>
-          <label className="text-xs font-bold text-[#0D0D0D] block mb-1">
+          <label className="text-xs font-bold text-[#0F0F0F] block mb-1">
             Email Address *
           </label>
           <input
@@ -116,14 +116,14 @@ function ContactFormInner() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="steve@apple.com"
-            className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E5E5E5] text-xs text-[#0D0D0D] focus:outline-none focus:border-[#F4511E] transition-colors placeholder:text-[#999999]"
+            className="w-full px-3.5 py-2.5 rounded-xl bg-[#FFFFFF] border border-[#0F0F0F]/10 text-xs text-[#0F0F0F] focus:outline-none focus:border-[#FC5001] transition-colors placeholder:text-[#0F0F0F]/40"
           />
         </div>
       </div>
 
       {/* Message */}
       <div>
-        <label className="text-xs font-bold text-[#0D0D0D] block mb-1">
+        <label className="text-xs font-bold text-[#0F0F0F] block mb-1">
           Project Overview (Optional)
         </label>
         <textarea
@@ -131,13 +131,13 @@ function ContactFormInner() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Describe your timeline, reference sites, or brand goals..."
-          className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E5E5E5] text-xs text-[#0D0D0D] focus:outline-none focus:border-[#F4511E] transition-colors resize-none placeholder:text-[#999999]"
+          className="w-full px-3.5 py-2.5 rounded-xl bg-[#FFFFFF] border border-[#0F0F0F]/10 text-xs text-[#0F0F0F] focus:outline-none focus:border-[#FC5001] transition-colors resize-none placeholder:text-[#0F0F0F]/40"
         />
       </div>
 
       <button
         type="submit"
-        className="w-full py-3.5 rounded-full bg-[#F4511E] hover:bg-[#D83A07] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-md hover:scale-[1.01] active:scale-98"
+        className="w-full py-3.5 rounded-full bg-[#FC5001] hover:opacity-95 text-[#FFFFFF] text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-md hover:scale-[1.01] active:scale-98"
       >
         <span>Submit Project Inquiry</span>
         <ArrowRight className="w-4 h-4" />
@@ -148,7 +148,7 @@ function ContactFormInner() {
 
 export default function ContactForm() {
   return (
-    <Suspense fallback={<div className="p-6 text-center text-xs text-[#888888]">Loading form...</div>}>
+    <Suspense fallback={<div className="p-6 text-center text-xs text-[#0F0F0F]/60">Loading form...</div>}>
       <ContactFormInner />
     </Suspense>
   );

@@ -15,19 +15,16 @@ const config: Config = {
         "3xl": "1640px",
       },
       colors: {
-        background: "#06070a",
-        foreground: "#f3f4f6",
-        surface: {
-          50: "rgba(255, 255, 255, 0.02)",
-          100: "rgba(255, 255, 255, 0.05)",
-          200: "rgba(255, 255, 255, 0.08)",
-          300: "rgba(255, 255, 255, 0.12)",
-        },
+        background: "#FFFFFF",
+        foreground: "#0F0F0F",
         brand: {
-          primary: "#38bdf8",
-          secondary: "#818cf8",
-          accent: "#c084fc",
-          emerald: "#10b981",
+          orange: "#FC5001",
+          light: "#F5F5F5",
+          white: "#FFFFFF",
+          dark: "#0F0F0F",
+          primary: "#FC5001",
+          secondary: "#0F0F0F",
+          accent: "#FC5001",
         }
       },
       backgroundImage: {
