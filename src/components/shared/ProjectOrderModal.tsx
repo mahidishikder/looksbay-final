@@ -6,6 +6,7 @@ import { X, CheckCircle2, ArrowRight } from "lucide-react";
 interface ProjectOrderModalProps {
   isOpen: boolean;
   onClose: () => void;
+  initialService?: string;
 }
 
 const serviceOptions = [
@@ -17,10 +18,16 @@ const serviceOptions = [
 
 const budgetOptions = ["$1,500 – $3,000", "$3,000 – $5,000", "$5,000+"];
 
-export default function ProjectOrderModal({ isOpen, onClose }: ProjectOrderModalProps) {
+export default function ProjectOrderModal({
+  isOpen,
+  onClose,
+  initialService,
+}: ProjectOrderModalProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [selectedService, setSelectedService] = useState(serviceOptions[0]);
+  const [selectedService, setSelectedService] = useState(
+    initialService && serviceOptions.includes(initialService) ? initialService : serviceOptions[0],
+  );
   const [selectedBudget, setSelectedBudget] = useState(budgetOptions[1]);
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);

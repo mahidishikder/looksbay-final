@@ -321,6 +321,15 @@ export default function Home10_Footer() {
             >
               Dribbble
             </a>
+            <Link href="/terms" className="hover:text-[#FC5001] transition-colors">
+              Terms
+            </Link>
+            <Link href="/privacy" className="hover:text-[#FC5001] transition-colors">
+              Privacy
+            </Link>
+            <Link href="/refund-policy" className="hover:text-[#FC5001] transition-colors">
+              Refund Policy
+            </Link>
             <Link href="/contact" className="hover:text-[#FC5001] transition-colors font-bold text-[#FFFFFF]">
               Contact Studio
             </Link>
